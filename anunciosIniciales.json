@@ -1,0 +1,151 @@
+{
+    "anuncios": [
+        {
+            "nombre": "Vendo Bicicleta",
+            "venta": true,
+            "precio": 230.15,
+            "foto": "/images/bicicleta.jpg",
+            "tags": [
+                "lifestyle",
+                "motor"
+            ],
+            "ciudad":"Cordoba"
+        },
+        {
+            "nombre": "Busco iPhone 3Gs",
+            "venta": false,
+            "precio": 170.00,
+            "foto": "/images/movil.png",
+            "tags": [
+                "lifestyle",
+                "mobile"
+            ],
+            "ciudad":"Malaga"
+        },
+        {
+            "nombre": "Reparo moviles",
+            "venta": false,
+            "precio": 10.00,
+            "foto": "/images/movil.png",
+            "tags": [
+                "lifestyle",
+                "mobile"
+            ],
+            "ciudad":"Malaga"
+        },
+        {
+            "nombre": "Vendo movil Samsung",
+            "venta": true,
+            "precio": 150.00,
+            "foto": "/images/movil.png",
+            "tags": [
+                "lifestyle",
+                "mobile"
+            ],
+            "ciudad":"Malaga"
+        },
+        {
+            "nombre": "Clases particulares Ingles",
+            "venta": true,
+            "precio": 10.00,
+            "foto": "/images/clases.png",
+            "tags": [
+                "work"
+            ],
+            "ciudad":"Granada"
+        },
+        {
+            "nombre": "Cuidado de niños",
+            "venta": true,
+            "precio": 10.00,
+            "foto": "/images/trabajo.png",
+            "tags": [
+                "work"
+            ],
+            "ciudad":"Malaga"
+        },
+        {
+            "nombre": "Alquilo Seat Ibiza",
+            "venta": true,
+            "precio": 100.00,
+            "foto": "/images/motor.png",
+            "tags": [
+                "motor"
+            ],
+            "ciudad":"Almeria"
+        },
+        {
+            "nombre": "Busco moldura puerta renaul kangoo 2012",
+            "venta": false,
+            "precio": 100.00,
+            "foto": "/images/motor.png",
+            "tags": [
+                "motor"
+            ],
+            "ciudad":"Jaen"
+        },
+        {
+            "nombre": "Compro guitarra escolar",
+            "venta": false,
+            "precio": 75.00,
+            "foto": "/images/guitarra.png",
+            "tags": [
+                "lifestyle"
+            ],
+            "ciudad":"Granada"
+        },
+        {
+            "nombre": "Tour guiado Granada",
+            "venta": true,
+            "precio": 10.00,
+            "foto": "/images/lifestyle.png",
+            "tags": [
+                "lifestyle"
+            ],
+            "ciudad":"Granada"
+        },
+        {
+            "nombre": "Cuidado de niños",
+            "venta": false,
+            "precio": 10.00,
+            "foto": "/images/trabajo.png",
+            "tags": [
+                "work"
+            ],
+            "ciudad":"Malaga"
+        },
+        {
+            "nombre": "Alquilo Seat Ibiza",
+            "venta": true,
+            "precio": 100.00,
+            "foto": "/images/motor.png",
+            "tags": [
+                "motor"
+            ],
+            "ciudad":"Almeria"
+        },
+        {
+            "nombre": "Vendo bicicleta niño",
+            "venta": true,
+            "precio": 20.00,
+            "foto": "/images/motor.png",
+            "tags": [
+                "motor"
+            ],
+            "ciudad":"Malaga"
+        },
+        {
+            "nombre": "Compro play Station 2",
+            "venta": false,
+            "precio": 20.00,
+            "foto": "/images/lifestyle.png",
+            "tags": [
+                "lifestyle"
+            ],
+            "ciudad":"Malaga"
+        }
+
+
+
+    ]
+}

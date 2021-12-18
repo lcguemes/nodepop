@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "ac441218-3ae7-40e7-964f-9d3ecae89a51",
+		"name": "Nodepop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "apiv1",
+			"item": [
+				{
+					"name": "New anuncio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "anuncio",
+									"type": "text"
+								},
+								{
+									"key": "venta",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"value": "image.png",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "lifestyle",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "motor",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "mobile",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "work",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/nuevo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								"nuevo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar anuncio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/borrar/6144fd0416bad711c318a77f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								"borrar",
+								"6144fd0416bad711c318a77f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar anuncio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Anuncio 2 modificado3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "venta",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "precio",
+									"value": "133",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"value": "image.png",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/modificar/6144f58effaf3f9317a00de7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								"modificar",
+								"6144f58effaf3f9317a00de7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar anuncio por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/buscar/6144f58effaf3f9317a00de7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								"buscar",
+								"6144f58effaf3f9317a00de7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado de tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?tags=motor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "tags",
+									"value": "motor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios sin filtros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado sin filtros nombre ordenados por precio ascendente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?sort=precio nombre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "precio nombre"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?nombre=Bicicleta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Bicicleta"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro venta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?venta=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "venta",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtros nombre+venta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?nombre=Bicicleta&venta=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Bicicleta"
+								},
+								{
+									"key": "venta",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?tags=work",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "tags",
+									"value": "work"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro rango de precios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?precio=133-150",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "precio",
+									"value": "133-150"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro rango de precios orden descendente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?precio=133-200&sort=precio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "precio",
+									"value": "133-200"
+								},
+								{
+									"key": "sort",
+									"value": "precio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro precios mayores de 200 orden descendente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?precio=200-&sort=precio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "precio",
+									"value": "200-"
+								},
+								{
+									"key": "sort",
+									"value": "precio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro precios menores de 200 orden descendente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?precio=-200&sort=precio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "precio",
+									"value": "-200"
+								},
+								{
+									"key": "sort",
+									"value": "precio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado anuncios filtro ciudad Malaga",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apiv1/anuncios/?ciudad=Malaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apiv1",
+								"anuncios",
+								""
+							],
+							"query": [
+								{
+									"key": "ciudad",
+									"value": "Malaga"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Imagen bicicleta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/images/bicicleta.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"bicicleta.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Imagen movil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/images/movil.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"movil.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado anuncios home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}

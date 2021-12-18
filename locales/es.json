@@ -1,0 +1,19 @@
+{
+	"Welcome to": "Bienvenido a",
+	"buy and sell all you need": "compra y vende todo lo que necesites",
+	"Example plurals": "Ejemplo de plurales",
+	"Mouse": {
+		"one": "Ratón",
+		"other": "Ratones"
+	},
+	"this is an example": "esto es un ejemplo",
+	"Code injection example": "Ejemplo inyección de código",
+	"i18n Example for plurals": "i18n Ejemplo de plurales",
+	"Features page": "Página características",
+	"Features": "Características",
+	"Download": "Descargas",
+	"Login": "Acceso",
+	"Private": "Privado",
+	"Invalid credentials": "Credenciales invalidas",
+	"Logout": "Salir"
+}

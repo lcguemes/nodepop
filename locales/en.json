@@ -1,0 +1,20 @@
+{
+	"Welcome to": "Welcome to",
+	"Code injection example": "Code injection example",
+	"bye": "bye",
+	"Mouse": {
+		"one": "Mouse",
+		"other": "Mice"
+	},
+	"buy and sell all you need": "buy and sell all you need",
+	"Example plurals": "Example plurals",
+	"this is an example": "this is an example",
+	"i18n Example for plurals": "i18n Example for plurals",
+	"Features page": "Features page",
+	"Features": "Features",
+	"Download": "Download",
+	"Login": "Login",
+	"Private": "Private",
+	"Invalid credentials": "Invalid credentials",
+	"Logout": "Logout"
+}

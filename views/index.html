@@ -1,0 +1,126 @@
+<!--  Se lleva a Cabecera
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  -->
+  <% include cabecera.html %>
+
+  <header class="masthead">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-12">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="display-1 lh-1 mb-3"><%= __('Welcome to') %> Nodepop</h1>
+                    <p class="lead fw-normal text-muted mb-5"> <%=__('buy and sell all you need')%>.</p>
+                    <h2><%=__('i18n Example for plurals') %></h2>
+                    <p>0 <%=__n('Mouse', 0)%> </p>
+                    <p>1 <%=__n('Mouse', 1)%> </p>
+                    <p>2 <%=__n('Mouse', 2)%> </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+  
+  
+<p>Anuncios:</p>
+  <table id="example" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
+    <thead class="bg-primary text-white">
+      <tr>
+        <th>Nombre</th>
+        <th>Compra/Venta</th>
+        <th>Precio</th>
+        <th>Foto</th>
+        <th>Tags</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i=0;i<anuncios.length;i++) {%>
+      <tr>
+        <td><%=anuncios[i].nombre %></td>
+        <td><%= anuncios[i].venta == 1 ? 'Venta' : 'Compra' %></td>
+        <td><%=anuncios[i].precio %></td>
+        <td><%=anuncios[i].foto %></td>
+        <td><%=anuncios[i].tags %></td>
+        <td><%=anuncios[i].ciudad %></td>
+      </tr>
+      <% } %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Nombre</th>
+        <th>Compra/Venta</th>
+        <th>Precio</th>
+        <th>Foto</th>
+        <th>Tags</th>
+        <th>Ciudad</th>
+      </tr>
+    </tfoot>
+  </table>
+<h2><%=__('Example plurals')%></h2>
+<p>0 <%=__n('Mouse',0)%></p>
+<p>1 <%=__n('Mouse',1)%></p>
+<p>2 <%=__n('Mouse',2)%></p>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "pageLength": 10,
+        "order": [[1, "asc"]],
+        "language": {
+          "lengthMenu": "Mostrar _MENU_ anuncios por página",
+          "zeroRecords": "No existen registros",
+          "info": "Mostrando _PAGE_ de _PAGES_ registros",
+          "infoEmpty": "No hay registros disponibles",
+          "infoFiltered": "(filtrado _MAX_ registros totales)",
+          "search": "Buscar",
+          "paginate": {
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Previo"
+          }
+        },
+        "columns": [
+                    { "data": "Nombre", "orderable" : true },
+                    { "data": "Compra/Venta", "orderable": true },
+                    { "data": "Precio", "orderable": true },
+                    {
+                        "render": function (data, type, JsonResultRow, meta) {
+                            return '<img src="Content/'+JsonResultRow.foto+'">';
+                        }
+                    },
+                    { "data": "Tags", "orderable": true },
+                    { "data": "Ciudad", "orderable": true },
+                ]
+      });
+    });
+  </script>
+
+<!--  Se lleva a pie.html
+</body>
+</html>
+
+-->
+
+<% include pie.html %>
